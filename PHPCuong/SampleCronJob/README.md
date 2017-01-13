@@ -29,6 +29,16 @@ You can understand:
 | +---------- Hour              (range: 0-23)
 +------------ Minute            (range: 0-59)
 
+For example:
+
+The cron was run in each:
+1 minute: * * * * * *
+2 minutes: */2 * * * * *
+10 minutes: */10 * * * * *
+1 hour: 0 * * * * *
+2 hours: 0 */2 * * * *
+
+
 #Step 2: I need to create a file {Magento root}/app/code/PHPCuong/SampleCronJob/Cron/Example.php, see the code in the path Cron/Example.php.
 
 #Step 3: Run cron job and see results
