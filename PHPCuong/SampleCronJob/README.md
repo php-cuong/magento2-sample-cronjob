@@ -10,6 +10,8 @@ Today, I will show you how to set up and run cron job in Magento 2 using custom 
 
 This procedure consists of three steps:
 
+# For running this demo, please copy the PHPCuong folder into {Magento root}/app/code
+
 #Step 1: I need to create a file {Magento root}/app/code/PHPCuong/SampleCronJob/etc/crontab.xml, see the code in the path etc/crontab.xml.
 
 Explain this code, let’s check the params in detail:
