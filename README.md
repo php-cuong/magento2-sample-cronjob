@@ -10,19 +10,7 @@ Today, I will show you how to set up and run cron job in Magento 2 using custom 
 
 This procedure consists of three steps:
 
-#Step 1: I need to create a file {Magento root}/app/code/PHPCuong/SampleCronJob/etc/crontab.xml
-
-Putting this code:
-
-<?xml version="1.0"?>
-
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
-    <group id="default">
-        <job name="phpcuong_sample_cron_job" instance="PHPCuong\SampleCronJob\Cron\Example" method="execute">
-            <schedule>* * * * *</schedule>
-        </job>
-    </group>
-</config>
+#Step 1: I need to create a file {Magento root}/app/code/PHPCuong/SampleCronJob/etc/crontab.xml, see the code in the path etc/crontab.xml.
 
 Explain this code, let’s check the params in detail:
 - Node “group” specifies the group of the cron tasks, which our cronjob should belong to. Magento 2 has only two groups “default” and “index” from the box. It is called in the file cron_groups.xml
@@ -41,29 +29,7 @@ You can understand:
 | +---------- Hour              (range: 0-23)
 +------------ Minute            (range: 0-59)
 
-#Step 2: I need to create a file {Magento root}/app/code/PHPCuong/SampleCronJob/Cron/Example.php
-
-Putting this code:
-
-namespace PHPCuong\SampleCronJob\Cron;
-
-/**
- * Class Example
- */
-class Example
-{
-
-    /**
-     * (cron process)
-     *
-     * @return void
-     */
-    public function execute()
-    {
-    $string = 'The cron was run.';
-        \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->debug($string);
-    }
-}
+#Step 2: I need to create a file {Magento root}/app/code/PHPCuong/SampleCronJob/Cron/Example.php, see the code in the path Cron/Example.php.
 
 #Step 3: Run cron job and see results
 
