@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sample_system_configuration>
+            <settings>
+                <input>Hello World</input>
+                <select>1</select>
+                <textarea>Magento 2 Tutorial</textarea>
+            </settings>
+            <other-settings>
+                <input>Other Settings</input>
+            </other-settings>
+        </sample_system_configuration>
+        <other-section>
+            <settings>
+                <input>Hello World 1111111</input>
+                <select>1</select>
+                <textarea>Magento 2 Tutorial 111111</textarea>
+            </settings>
+            <other-settings>
+                <input>Other Settings</input>
+            </other-settings>
+        </other-section>
+    </default>
+</config>
