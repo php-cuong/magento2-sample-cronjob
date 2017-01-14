@@ -1,0 +1,14 @@
+<!--@subject {{trans "[%full_name] You have been logged in successfully" full_name=$user.full_name}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p>{{trans "Hello %full_name," full_name=$user.full_name}}</p>
+
+<p>{{trans "You have been logged in successfully at %store_name" store_name=$store.getFrontendName()}}</p>
+
+<p>{{trans "If you have not authorized this action, please contact us immediately at %store_email" store_email=$store_email |escape}}{{depend store_phone}} {{trans "or call us at %store_phone" store_phone=$store_phone |escape}}{{/depend}}.</p>
+
+<p>{{trans "Thanks,"}}</p>
+{{var store.getFrontendName()}}
+
+{{template config_path="design/email/footer_template"}}
