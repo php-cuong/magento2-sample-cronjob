@@ -1,0 +1,12 @@
+<?php
+// You add the conversion tracking code here.
+// In this example, i display order id and dump variable $lastOrder for getting the details about this order.
+// You can add the postback link here or add image pixel, iframe, for tracking conversion.
+// This screen only display every time the order was completed.
+// You can add google adwords conversion tracking here.
+
+echo 'Your Order ID is: '.$this->getOrderId(); ?>
+
+<pre>
+    <?php var_dump($this->getLastOrder()); ?>
+</pre>
